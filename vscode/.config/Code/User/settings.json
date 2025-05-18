@@ -1,0 +1,20 @@
+{
+    "workbench.colorTheme": "Dracula Theme",
+    "git.confirmSync": false,
+    
+    
+    "nix.enableLanguageServer": true,
+    "nix.serverPath": "nixd",
+    "nix.serverSettings": {
+        "nixd": {
+            "formatting": {
+                "command": [ "alejandra" ], // or nixfmt or nixpkgs-fmt
+            },
+            "options": {
+                "nixos": {
+                    "expr": "(builtins.getFlake \"/home/zemy/nixos\").nixosConfigurations.zemy-os.options"
+                },
+            },
+        }
+    }
+}
